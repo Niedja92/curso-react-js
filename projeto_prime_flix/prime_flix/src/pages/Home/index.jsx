@@ -22,7 +22,7 @@ function Home() {
       //console.log(response.data.results.slice(0,10)); OBS.: o slice faz com que só seja exibida a quantidade descrita
 
       setFilmes(response.data.results.slice(0, 10));
-      setLoading(false)
+      setLoading(false);
     }
 
     loadFilmes();
@@ -45,8 +45,9 @@ function Home() {
               <strong>{filme.title}</strong>
               <img
                 src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
+                alt={filme.title}
               />
-              <Link to={`/filmes/${filme.id}`}>Acessar</Link>
+              <Link to={`/filme/${filme.id}`}>Acessar</Link>
             </article>
           );
         })}
